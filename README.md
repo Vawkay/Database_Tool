@@ -77,6 +77,10 @@ The result is the memory address of the query, to see tables and columns use the
 
 The module is configured to log activities to a file named `database_tool.log` in the same directory as the module. Ensure the application has write permissions to the directory for logging to work correctly.
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
 ## Contributing
 
 Contributions to enhance `database_tool.py`, such as adding support for more database systems or improving existing functionalities, are welcome. Please fork the repository, make your changes, and submit a pull request.
