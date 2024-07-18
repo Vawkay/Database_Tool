@@ -24,7 +24,7 @@ def find_driver(db_system):
         return None
     drivers = [driver for driver in pyodbc.drivers() if db_system in driver]
     if drivers:
-        # Retorna o último driver compatível encontrado, que geralmente é o mais atual
+        # Returns the last known compatible driver found, usually the most updated one
         return drivers[-1]
     else:
         return None
@@ -101,7 +101,7 @@ class MSSQLDatabaseManager:
         logger.info(f"Executing query: {query}")
         try:
             with self.engine.begin() as conn:
-                query = text(str(query))  # Converta a query em uma expressão SQL textual
+                query = text(str(query))  # Convert the query into a textual SQL expression
                 result = conn.execute(query)
                 if commit:
                     self.session.commit()
